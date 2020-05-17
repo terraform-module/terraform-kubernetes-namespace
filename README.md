@@ -23,7 +23,13 @@ Terraform module blueprint
 Here's the gist of using it directly from github.
 
 ```hcl
+module cicd {
+    source  = "terraform-module/namespace/kubernetes"
+    version = "0.1.0"
 
+    name        = "namespace-name"
+    description = "custom-namespace"
+}
 ```
 
 ## Assumptions
@@ -40,11 +46,11 @@ Error: no lines in file
 
 <!-- START makefile-doc -->
 ```
-$ make help 
+$ make help
 hooks                          Commit hooks setup
 validate                       Validate with pre-commit hooks
 changelog                      Update changelog
-release                        Create release version 
+release                        Create release version
 ```
 <!-- END makefile-doc -->
 
@@ -70,3 +76,7 @@ Submit a pull request
 Currently maintained by [Ivan Katliarchuk](https://github.com/ivankatliarchuk) and these [awesome contributors](https://github.com/terraform-module/terraform-module-blueprint/graphs/contributors).
 
 [![ForTheBadge uses-git](http://ForTheBadge.com/images/badges/uses-git.svg)](https://GitHub.com/)
+
+## Terraform Registry
+
+- [Module](https://registry.terraform.io/modules/terraform-module/namespace/kubernetes)
